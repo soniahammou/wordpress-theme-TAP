@@ -1,0 +1,66 @@
+/* Header */
+.app-header{
+  /* border: solid 2px green; */
+  background-color : var(--white-color);
+
+}
+
+.app-header_button-section {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--orange-color);
+  padding : 5px;
+}
+
+.app-header_button{
+  color : black;
+  border-radius : 30px;
+  padding:10px;
+  margin : 8px;
+  transition : 0.5s;
+  background-color: white;
+}
+
+
+.header_button:hover {
+  color :var(--white-color);
+  background-color:black;
+}
+
+/*Nav css*/ 
+.app-header_nav {
+  display: flex;
+  justify-content: space-around;
+/* border : solid 12px blue; */
+height: 10vh;
+}
+
+
+.app-header_nav ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.app-header_nav li {
+  /* border : solid red 2px; */
+  list-style-type :none;
+}
+
+#app-header_logo{
+  /* border : solid green 5px; */
+width: 50%;
+margin:0;
+
+}
+
+ #app-header_logo :nth-child(1){
+  /* border : solid red 2px; */
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+}
+

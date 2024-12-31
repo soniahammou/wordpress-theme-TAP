@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+
+:root {
+
+  --white-color: white;
+  --orange-color: #FA6625;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+body {
+    margin: 0; /*marge par defaut à 0 */ 
+}
+
+h2, h4{
+
+  color: var(--orange-color);
+
+}
+
+p{
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: var(--orange-color);
+  transition : 0.3s;
+}
+
+svg {
+  height: 3vh;
+}
+.btn {
+  border: none;
+  padding : 0 30px;
+  background-color: var(--orange-color);
+  color :var(--white-color);
+  padding: 10px 30px 10px 30px;
+  margin : 8px;
+  transition : 0.5s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color :var(--white-color);
+  background-color:black;
+}
+
+

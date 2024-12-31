@@ -1,0 +1,33 @@
+.footer{
+  display: flex;
+}
+
+.footer_logo{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25vh;
+  object-fit: contain;
+}
+
+.footer_text{
+  display: flex;
+  flex:3;
+  justify-content: space-around;
+  align-items:  center;
+
+}
+
+.footer-tpl_text{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+}
+
+
+
+.footer-tpl_text svg {
+  margin-bottom: 10px;  /* Ajoute un espacement entre les SVGs */
+}

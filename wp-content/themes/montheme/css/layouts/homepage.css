@@ -1,0 +1,64 @@
+.homepage_about{
+  display:flex;
+  justify-content: center;
+  padding-right : 2%;
+  padding-left : 2%;
+  padding-top:3%;
+
+}
+
+.homepage_about_logo,
+.homepage__about__text
+{
+  flex:1;
+}
+
+.homepage_about_logo :nth-child(1){
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+
+.homepage__about__text{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-content: center;
+  text-align: justify;
+}
+.btn_homepage__about{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
+
+/* SECTION HORAIRES */
+
+.homepage_horaire{
+  background-color:var(--orange-color);
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+.homepage__about__text-title{
+  color: white;
+}
+
+.homepage_horaire_title{
+  width: 100%;
+  text-align: center;
+}
+
+.homepage_horaire__places{
+  background-color: white;
+  width: 20%;
+  margin : 15px;
+  padding : 20px;
+  text-align:center;
+
+}

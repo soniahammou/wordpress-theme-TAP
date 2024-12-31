@@ -1,0 +1,29 @@
+# Ignorer le cœur de WordPress
+wp-admin/
+wp-includes/
+
+# Ignorer les fichiers de configuration sensibles
+wp-config.php
+
+# Ignorer les plugins téléchargés
+wp-content/plugins/*
+
+# Inclure les plugins personnalisés
+!wp-content/plugins/mon-plugin/
+
+# Ignorer les thèmes téléchargés
+wp-content/themes/*
+
+# Inclure le thème que tu développes
+!wp-content/themes/montheme/
+
+# Ignorer les téléchargements (images, médias)
+wp-content/uploads/
+
+# Ignorer les fichiers temporaires ou systèmes
+*.log
+*.sql
+*.tar.gz
+*.zip
+.DS_Store
+Thumbs.db

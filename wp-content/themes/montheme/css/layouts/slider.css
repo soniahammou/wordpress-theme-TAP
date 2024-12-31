@@ -1,0 +1,42 @@
+
+
+
+
+/* slider */
+
+.homepage-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+position: relative;
+height: 70vh;
+
+}
+
+
+.slider__btn{
+  background-color :black;
+  border-radius: 3px;
+  color: var(--white-color);
+  padding: 0.5rem;
+  z-index: 1;
+  font-weight: bold;
+}
+
+
+.slider__img {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.slider__img--current {
+  opacity: 1;
+  /* z-index: 1; */
+}
+
