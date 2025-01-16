@@ -1,0 +1,13 @@
+.error404_section {
+
+  background-color: var(--orange-color);
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+.error404_section-content{
+  color : white;
+}
