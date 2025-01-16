@@ -1,0 +1,31 @@
+
+/* SECTION HORAIRES */
+
+.homepage_horaire{
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  padding : 5%;
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: center;
+}
+
+
+.homepage__about__text-title{
+  color: white;
+}
+
+.homepage_horaire_title{
+  width: 100%;
+  text-align: center;
+}
+
+.homepage_horaire__places{
+  background-color: white;
+  width: 20%;
+  margin : 15px;
+  padding : 20px;
+  text-align:center;
+
+}
