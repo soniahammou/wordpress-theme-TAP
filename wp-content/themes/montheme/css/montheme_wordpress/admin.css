@@ -1,0 +1,7 @@
+.column-thumbnail img{
+width: 150px;
+height: 150px;
+/* height: 20%; */
+object-fit: cover;
+overflow: hidden;
+}

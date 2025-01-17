@@ -1,25 +1,6 @@
 <?php get_header() ?>
 
-<header class="app-header">
-
-  <section class="app-header_button-section">
-    <button a href="#" class="btn app-header_button"> Reserver pour un evenement </button>
-    <button a href="#" class="btn app-header_button"> Commander </button>
-
-  </section>
-
-  <nav class="app-header_nav">
-    <figure id="app-header_logo">
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo-truck-a-pates"></a>
-    </figure>
-    <ul>
-      <li> <a href="#">Notre carte</a> </li>
-      <li> <a href="#">Notre Histoire</a> </li>
-      <li> <a href="#">Horaires</a> </li>
-      <li> <a href="#">Contact</a> </li>
-    </ul>
-  </nav>
-</header>
+<?php wp_title(); ?>
 
 
 <main>
@@ -57,7 +38,7 @@
 
     <div class="homepage_horaire_title">
       <h2 class="homepage__about__text-title">Nos Horaires & Lieux de Régal </h2>
-      <p> Service de 12h à 13h45</p>
+      <p> <?= get_option('agence_horaire'); ?></p>
     </div>
 
     <div class="homepage_horaire__places">
@@ -79,6 +60,5 @@
 
 </main>
 
-<!-- <script src="/js/app.js" type="module"></script> -->
 
-<?php get_footer() ?>
+<?php get_footer();
