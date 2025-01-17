@@ -1,29 +1,53 @@
-# Ignorer le cœur de WordPress
-wp-admin/
-wp-includes/
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
-# Ignorer les fichiers de configuration sensibles
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
 wp-config.php
 
-# Ignorer les plugins téléchargés
-wp-content/plugins/*
+# Example themes
+/wp-content/themes/twenty*/
 
-# Inclure les plugins personnalisés
-!wp-content/plugins/mon-plugin/
+# Example plugin
+/wp-content/plugins/hello.php
 
-# Ignorer les thèmes téléchargés
-wp-content/themes/*
+# Uploads
+/wp-content/uploads/
 
-# Inclure le thème que tu développes
-!wp-content/themes/montheme/
-
-# Ignorer les téléchargements (images, médias)
-wp-content/uploads/
-
-# Ignorer les fichiers temporaires ou systèmes
+# Log files
 *.log
+
+# htaccess
+/.htaccess
+
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+wp-content/themes
+
+# autorise mon theme
+!/wp-content/themes/montheme/
+
 *.sql
-*.tar.gz
-*.zip
-.DS_Store
-Thumbs.db
