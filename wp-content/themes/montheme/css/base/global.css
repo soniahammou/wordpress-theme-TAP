@@ -64,3 +64,12 @@ svg {
 }
 
 
+.white-bg {
+  background-color: white;
+  color : black;
+}
+
+.white-bg:hover {
+  background-color: black;
+  color : white;
+}

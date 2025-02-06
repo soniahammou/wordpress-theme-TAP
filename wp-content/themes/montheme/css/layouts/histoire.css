@@ -1,0 +1,132 @@
+
+/* section notre histoire  */
+
+
+
+.about{
+  display:flex;
+  justify-content: center;
+}
+
+
+.about__image ,
+.about__content
+{
+  display: flex;
+  flex:1;  
+  margin:50px;
+}
+
+
+
+
+
+ /* --------------- Section image----------------------  */
+
+
+/* Image dans la homepage de la section about  */
+
+.about__image-figure{
+  width: 75vh;
+  height: 50vh;
+}
+
+.about__image-figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+ /* Modificateur pour les images dans la page notre histoire */
+.about__image-figure--scale{
+  width: 65vh;
+  height: 70vh;
+}
+
+.about__image-figure--scale-event{
+
+  width: 70vh;
+  height: 45vh;
+}
+
+.about__image--align-right{
+  justify-content: right;
+}
+
+
+
+
+
+
+ /* ---------------  Section textes ----------------------  */
+
+.about__content{
+  align-items: center;
+  justify-content: flex-end;
+  /* border : solid red 2px */
+}
+
+
+.about_content{
+  flex-basis: 50%;
+}
+
+/* ----- Modificateur d'emplacement de blocs pour les textes --- */
+
+.about__content--align-left{
+  justify-content: flex-start;
+}
+
+
+
+.about__content-text{
+  width: 70%;
+  text-align: justify;
+  align-self: center;
+}
+
+
+
+
+ /* --------------- FIN ---------------------  */
+
+
+ /* banniere horaire  */
+
+.about--background_image{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 4%;
+  padding: 7%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.about__content-text--align 
+ {
+  color : white;
+}
+
+.about__content-text--align h2{
+  color : white;
+}
+.about__content--width{
+  width: 100vh;
+
+}
+
+/* bouton banniere horaire  */
+
+.about_btn{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.btn--about-color {
+  color: black;
+  background-color: white;
+}

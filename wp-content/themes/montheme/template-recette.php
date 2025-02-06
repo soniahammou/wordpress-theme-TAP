@@ -19,16 +19,58 @@ get_header(); ?>
 
 
 <!-- Nav de toutes les taxonomies  -->
-<!-- ?php $recettes = get_terms(['taxonomy' => 'recette_category']); ?>
+<?php $recettes = get_terms(['taxonomy' => 'recette_category']); ?> 
 <ul>
-  ?php foreach ($recettes as $recette): ?>
+  <?php foreach ($recettes as $recette): ?>
     <li>
-      <a href="?= get_term_link($recette) ?>" class="nav-link ?= is_tax('recette_category', $recette->term_id) ? 'active' : '' ?>">?= $recette->name ?></a>
+      <a href="<?= get_term_link($recette) ?>" class="nav-link ?= is_tax('recette_category', $recette->term_id) ? 'active' : '' ?>"><?= $recette->name ?></a>
     </li>
-?php endforeach; ?>
-</ul> -->
+<?php endforeach; ?>
+</ul> 
+
+
+<?php 
+
+$allterms = get_terms( array( 'parent' => 'pâtes fraiches' ) );
+foreach ($allterms as $term) {
+    $args = array(
+        'post_type'      =>  'video_cpt',
+        'post_status'    =>  'publish',
+        'posts_per_page' =>  1,
+        'tax_query'      => array ( array (
+            'taxonomy' => 'recette_category',
+            'terms'    => $term->term_id,
+         ))
+  ); //the fields parameter is to return just the post ids rather than the whole posts
+      $video_query  = new WP_Query( $args );
+      if ($video_query->have_posts()) {
+         //there's videos that match this term, so do something
+         echo $term->name;
+      }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
-$term_name = 'Pâtes fraîches'; // Nom de la catégorie
+$term_name = 'Fromage'; // Nom de la catégorie
 $taxonomy_name = 'recette_category'; // Nom de la taxonomie
 
 // Récupérer l'objet terme pour "Pâtes fraîches"

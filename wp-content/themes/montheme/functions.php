@@ -56,6 +56,7 @@ if (!function_exists('montheme_register_css')) {
       'slider' => '/css/layouts/slider.css',
       'recette' => '/css/layouts/recette.css',
       'horaire' => '/css/layouts/horaire.css',
+      'histoire' => '/css/layouts/histoire.css',
       '404' => '/css/layouts/404.css',
 
     ];

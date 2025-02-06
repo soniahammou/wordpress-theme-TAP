@@ -7,9 +7,9 @@
 get_header();
 ?>
 
-<section class="homepage_about">
+<section>
 
-  <div class="homepage__about__text ">
+  <!-- <div class="homepage__about__text "> -->
 
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
@@ -19,10 +19,10 @@ get_header();
     else: ?>
       <p>Aucun article :</p>
     <?php endif; ?>
-    <div class="btn_homepage__about">
+    <!-- <div class="btn_homepage__about">
       <button a href="#" class="btn"> Commmander en ligne </button>
     </div>
-  </div>
+  </div> -->
 
 </section>
 
