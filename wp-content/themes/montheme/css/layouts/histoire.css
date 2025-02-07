@@ -122,9 +122,14 @@
 
 .about_btn{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
 }
+
+/* .about_btn--position {
+  justify-content: flex-start;
+
+} */
 
 .btn--about-color {
   color: black;

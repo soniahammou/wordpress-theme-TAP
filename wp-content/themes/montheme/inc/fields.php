@@ -135,6 +135,8 @@
                   Field::make('text', 'heading', __('Saisir le titre')),
                   Field::make('image', 'image', __('Importer une image')),
                   Field::make('rich_text', 'content', __('Ecrire le paragraphe')),
+                  Field::make('text', 'link_btn', __('Lien du bouton')),
+                  Field::make('text', 'btn_content', __('Contenu du bouton')),
                 ))
                 ->set_render_callback(function ($fields) { ?>
 
@@ -142,12 +144,24 @@
 
                 <section class="about">
 
-
                   <div class="about__content">
                     <div class="about__content-text">
                       <h2><?php echo esc_html($fields['heading']); ?></h2>
                       <p> <?php echo apply_filters('the_content', $fields['content']); ?></p>
-                    </div>
+                    
+
+                    <?php if(!empty($fields['link_btn']) && !empty($fields['btn_content'])): ?>
+                  <div class="about_btn">
+                        <a href="<?php echo esc_url($fields['link_btn']) ?>">
+                          <button class="btn">
+                            <?= esc_html($fields['btn_content']) ?>
+                          </button>
+                        </a>
+
+                  </div>
+                      <?php endif; ?>
+                      </div>
+
                   </div>
 
                   <div class="about__image">
@@ -155,10 +169,6 @@
                       <?php echo wp_get_attachment_image($fields['image'], 'full');  ?>
                     </figure>
                   </div>
-
-
-
-
                 </section>
 
 
@@ -198,7 +208,7 @@
 
 
                   <?php if(!empty($fields['link_btn']) && !empty($fields['btn_content'])): ?>
-                  <div class="about_btn">
+                  <div class="about_btn--position">
 
 
                         <a href="<?php echo esc_url($fields['link_btn']) ?>">
