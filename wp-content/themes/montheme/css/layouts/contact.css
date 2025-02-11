@@ -1,0 +1,18 @@
+.contact {
+  background-color: var(--orange-color);
+  width: 100%;
+  padding:10%;
+
+}
+
+
+.contact_content--color{
+  color : white;
+}
+
+.contact_content_paragraph--color p
+{
+  color : white;
+
+}
+

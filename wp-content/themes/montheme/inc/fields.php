@@ -19,6 +19,10 @@
 
                 ))
 
+                ->add_tab(__('Contact'), array(
+                  Field::make('text', 'numero_telephone', 'Votre numéro de téléphone'),
+
+                ))
                 ->add_tab(__('Reseaux Sociaux'), array(
                   Field::make('text', 'facebook_url', 'URL facebook'),
                   Field::make('text', 'instagram_url', 'URL instagram'),

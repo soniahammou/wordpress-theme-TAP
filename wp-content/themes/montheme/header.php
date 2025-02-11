@@ -22,8 +22,9 @@
 
   <section class="app-header_button-section" style="background-color:<?php echo get_theme_mod('montheme_second_header_background'); ?>">
     <button a href="#" class="btn app-header_button"> Reserver pour un evenement </button>
-    <button a href="#" class="btn app-header_button"> Commander </button>
-
+    <a href="<?= carbon_get_theme_option('lien_de_commande'); ?>"target="_blank">
+ <button class="btn app-header_button"> Commander </button>
+</a>
   </section>
   <nav class="app-header_nav" style="background-color:<?php echo get_theme_mod('header_background'); ?>">
     <figure id="app-header_logo">
