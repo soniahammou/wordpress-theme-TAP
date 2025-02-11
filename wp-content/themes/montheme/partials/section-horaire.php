@@ -9,39 +9,32 @@
           </p>
         </div>
 
-        <?php for ($i = 1; $i < 4; $i++):
-          $lieux = get_option('agence_lieux');
-          $lieu = isset($lieux[$i]) ? esc_html($lieux[$i]) : 'Aucun lieu enregistré.';
+        <?php 
 
-          $days = get_option('agence_days');
-          $day = isset($days[$i]) ? esc_html($days[$i]) : 'Aucun jour enregistré.';
+    $lieux = carbon_get_theme_option('lieux_repetitifs');
 
-        ?>
+      if ($lieux):
+        foreach ($lieux as $lieu):?>
+
           <div class="homepage_horaire__places">
-            <h3> <?php echo nl2br($day); ?> <h3>
-                <p> <?php echo nl2br($lieu); ?> </p>
+            <h3 class="homepage_horaire__title--color"> <?php echo esc_html($lieu['days_options']); ?> </h3>
+            <p class="homepage_horaire__paragraph--bold"> <?php echo esc_html($lieu['parking_name']); ?> </p>
+            <p> <?php echo wpautop($lieu['lieu_adresse']); ?> </p>
           </div>
-        <?php endfor; ?>
+
+      <?php  endforeach; ?>
+     <?php else: ?>
+        <p> Aucun lieu enregistré.</p>
+     <?php endif; ?>
+        
+    
+
+        <div class="about_btn">
+           <a href="<?= carbon_get_theme_option('lien_de_commande'); ?>"target="_blank">
+            <button class="btn btn--white-color"> Commander en ligne </button>
+            </a>
+
+        </div>
 
       </section>
 
-
-
-
-      <?php
-
-      // recuperation avec carbon 
-      $lieux = carbon_get_theme_option('lieux_repetitifs');
-
-      if ($lieux) {
-        foreach ($lieux as $lieu) {
-          echo '<h3>' . esc_html($lieu['days_options']) . '</h3>';
-          echo '<p>' . esc_html($lieu['lieu_adresse']) . '</p>';
-        }
-      } else {
-        echo 'Aucun lieu enregistré.';
-      }
-
-
-
-      ?>

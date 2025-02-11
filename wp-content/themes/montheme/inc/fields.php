@@ -28,6 +28,7 @@
                   Field::make('complex', 'lieux_repetitifs', __('Liste des lieux'))
                     ->add_fields(array(
                       Field::make('text', 'days_options', __('Jour de tournées')),
+                      Field::make('text', 'parking_name', __('Nom du parking')),
                       Field::make('textarea', 'lieu_adresse', __('Adresse du lieu')),
                     ))
                     ->set_max(10) // Limite à 10 répétitions (optionnel)
@@ -212,7 +213,7 @@
 
 
                         <a href="<?php echo esc_url($fields['link_btn']) ?>">
-                          <button class="btn btn--about-color">
+                          <button class="btn btn--white-color">
                             <?= esc_html($fields['btn_content']) ?>
                           </button>
     

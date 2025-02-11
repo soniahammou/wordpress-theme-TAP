@@ -64,12 +64,7 @@ svg {
 }
 
 
-.white-bg {
+.btn--white-color {
+  color: black;
   background-color: white;
-  color : black;
-}
-
-.white-bg:hover {
-  background-color: black;
-  color : white;
 }

@@ -29,3 +29,11 @@
   text-align:center;
 
 }
+
+.homepage_horaire__title--color{
+  color: var(--orange-color);
+}
+
+.homepage_horaire__paragraph--bold {
+  font-weight: bold;
+}

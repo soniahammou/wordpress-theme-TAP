@@ -126,12 +126,7 @@
   width: 100%;
 }
 
-/* .about_btn--position {
+.about_btn--position {
   justify-content: flex-start;
 
-} */
-
-.btn--about-color {
-  color: black;
-  background-color: white;
 }
