@@ -2,7 +2,8 @@
 
 TAP est un thème WordPress développé sur mesure, pensé pour la personnalisation du food truck, truck à pâtes. https://truckapates.fr/ ( mise en prod soon )
 
-
+### Maquette Figma
+https://www.figma.com/design/XcgAPsLbFcPRwUac8xJlEc/Truck-a-pates?node-id=0-1&t=b4COGFQUxTNaqVTD-1
 
 
 ### Fonctionnalités principales
