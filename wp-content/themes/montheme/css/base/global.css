@@ -68,3 +68,8 @@ svg {
   color: black;
   background-color: white;
 }
+
+a.active {
+  font-weight: bold;
+  color: #ff0000; /* Choisis la couleur que tu préfères */
+}

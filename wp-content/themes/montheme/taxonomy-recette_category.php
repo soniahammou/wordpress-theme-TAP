@@ -1,87 +1,78 @@
+ <?php /* echo 'taxonomy';*/ ?>
+
+ <?php get_header(); ?>
+
+ <section class="carte" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/notre-carte.png');">
+
+<div class="carte_content">
+  <h1> <?= carbon_get_theme_option('titre_banniere_notre_carte'); ?></h1>
+
+  <?= carbon_get_theme_option('description_banniere_notre_carte'); ?>
+</div>
 
 
-<?php get_header(); ?>
+</section>
+ <main>
 
-<main>
+   <nav class="app-header_nav app-header_nav--width" style="background-color:<?php echo get_theme_mod('header_background'); ?>">
 
-  <h1>Liste des recettes taxonomy</h1>
+     <?php wp_nav_menu([
+        //correspond au 1er arg de reister_nav_menu
+        'theme_location' => 'recette',
+        'container' => false,
+      ]) ?>
 
-  <nav class="app-header_nav" style="background-color:<?php echo get_theme_mod('header_background'); ?>">
+   </nav>
 
-    <?php wp_nav_menu([
-      //correspond au 1er arg de reister_nav_menu
-      'theme_location' => 'recette',
-      'container' => false,
-    ]) ?>
 
-  </nav>
-  <?php
-  /*
-
-  // https://wpchannel.com/wordpress/tutoriels-wordpress/afficher-categories-termes-dune-taxonomie-menu-personnalise/
-  $queried_object = get_queried_object();
-  $taxonomy = $queried_object->taxonomy;
-  $term_id = $queried_object->term_id;
-  $taxonomy_name = 'recette_category';
-  $term_children = get_term_children($term_id, $taxonomy_name);
-
-  echo '<ul class="nav nav-pills">';
-  foreach ($term_children as $child) {
-    $term = get_term_by('id', $child, $taxonomy_name);
-    echo '<li>' . $term->name . ' </li>';
-  }
-  echo '</ul>';
-  */
-  ?>
-
-<?php if(have_posts()){
+   <?php /*if(have_posts()){
 the_terms( $post->ID, 'recette_category', 'carte : ' ); 
 
-}?>
+}*/ ?>
 
 
 
 
 
-  <?php if (have_posts()): while (have_posts()): the_post(); ?>
+   <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
-      <section class="recette_section">
+       <section class="recette_section">
 
-        <?php
-        $img = get_the_post_thumbnail();
+         <?php
+          $img = get_the_post_thumbnail();
 
-        if ($img !== '') { ?>
-          <div>
-            <figure class="recette_section-image">
-              <?php the_post_thumbnail(); ?>
-            </figure>
-          </div>
-        <?php }  ?>
+          if ($img !== '') { ?>
+           <div>
+             <figure class="recette_section-image">
+               <?php the_post_thumbnail(); ?>
+             </figure>
+           </div>
+         <?php }  ?>
 
-        <div class="recette_section-text">
-          <h3><?php the_title(); ?></h3>
-          <p> <?php the_content(); ?> </p>
-        </div>
-
-
-      </section>
+         <div class="recette_section-text">
+           <h3><?php the_title(); ?></h3>
+           <p> <?php the_content(); ?> </p>
+         </div>
 
 
-
-    <?php endwhile;
-  else: ?>
-        <section class="recette_section">
-
-          <div class="recette_section-text">
-
-   <p>Pas encore de ici, mais restez avec nous : la gourmandise arrive très vite !</p>
-   </div>
-   </section>
-
-  <?php endif; ?>
-
-</main>
+       </section>
 
 
 
-<?php get_footer(); ?>
+     <?php endwhile;
+    else: ?>
+     <section class="recette_section">
+
+       <div class="recette_section-text">
+
+         <p>Pas encore de ici, mais restez avec nous : la gourmandise arrive très vite !</p>
+       </div>
+     </section>
+
+   <?php endif; ?>
+
+ </main>
+
+
+
+ <?php get_footer(); ?>

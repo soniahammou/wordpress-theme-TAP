@@ -37,9 +37,13 @@
                     ))
                     ->set_max(10) // Limite à 10 répétitions (optionnel)
                     ->set_min(1)  // Minimum 1 répétition (optionnel)
+                ))
+
+                ->add_tab(__('Notre Carte Banniere'), array(
+                  Field::make('text', 'titre_banniere_notre_carte', 'titre de la banniere'),
+                  Field::make('textarea', 'description_banniere_notre_carte', 'description de la bannière'),
+
                 ));
-
-
 
 
               // Action pour enregistrer des blocs pour les Gestion du 1er block
@@ -200,7 +204,7 @@
 
 
 
-                <section class="about--background_image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/meatball.png');">
+                <section class="about--background_image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/banniere-notre-carte.png');">
 
           
                   <div class="about__content--width">
@@ -235,5 +239,6 @@
             <?php  });
 
 
+              
 
             });

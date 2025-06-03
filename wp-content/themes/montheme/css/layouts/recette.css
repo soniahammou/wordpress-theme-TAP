@@ -32,3 +32,21 @@
   padding : 0 10px 0 10px;
 }
 
+/* banniere recette */
+
+.carte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-repeat : no-repeat;
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  padding: 2%;
+
+}
+
+.carte_content{
+  width: 30%;
+  color : white;
+}
